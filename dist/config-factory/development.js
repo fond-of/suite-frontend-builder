@@ -149,6 +149,16 @@ exports.default = registry_1.register(registry_1.DefaultMode.DEVELOPMENT, () => 
                 ]
             }, module: {
                 rules: [
+                    {
+                        test: /\.(ttf|woff2?|eot|svg|otf)\??(\d*\w*=?\.?)+$/i,
+                        use: [{
+                                loader: 'file-loader',
+                                options: {
+                                    debug: true,
+                                    name: '/fonts/[name].[ext]'
+                                }
+                            }]
+                    },
                     { test: /\.ts$/, loader: 'ts-loader', options: this.getTSLoaderOptions() },
                     {
                         test: /\.scss/i,
