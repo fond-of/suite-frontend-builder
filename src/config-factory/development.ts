@@ -196,8 +196,9 @@ export default <ConfigFactoryConstructor>register(DefaultMode.DEVELOPMENT, () =>
                       use: [{
                           loader: 'file-loader',
                           options: {
+                              debug: true,
                               name: '/fonts/[name].[ext]',
-                              publicPath: paths.public
+                              // publicPath: paths.public
                           }
                       }]
                     },
