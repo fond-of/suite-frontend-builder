@@ -191,6 +191,16 @@ export default <ConfigFactoryConstructor>register(DefaultMode.DEVELOPMENT, () =>
 
             module: {
                 rules: [
+                    {
+                      test: /\.(ttf|woff2?|eot|svg|otf)\??(\d*\w*=?\.?)+$/i,
+                      use: [{
+                          loader: 'file-loader',
+                          options: {
+                              name: '/fonts/[name].[ext]',
+                              publicPath: paths.public
+                          }
+                      }]
+                    },
                     { test: /\.ts$/, loader: 'ts-loader', options: this.getTSLoaderOptions() },
                     {
                         test: /\.scss/i,
