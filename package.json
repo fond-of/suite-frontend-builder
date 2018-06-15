@@ -36,10 +36,10 @@
     "ts-loader": "~4.4.1",
     "typescript": "~2.9.1",
     "uglifyjs-webpack-plugin": "~1.2.4",
-    "webpack": "~4.12.0"
+    "webpack": "~4.12.0",
+    "file-loader": "^1.1.11"
   },
   "devDependencies": {
     "@types/node": "~10.3.2",
-    "file-loader": "^1.1.11"
   }
 }
